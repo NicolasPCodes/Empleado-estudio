@@ -1,0 +1,16 @@
+<h1>Busqueda por trabajo</h1>
+
+<form method='GET'>{% csrf_token %}
+    <input type='text' id='trabajo' name='trabajo' placeholder='ingrese trabajo aqui'>
+    <br>
+    <button type='submit'>BUSCAR</button>
+</form>
+<p>Trabajos disponibles a busqueda: 0 - Contador , 1 - Administrador, 2 - Economista, 3 - Otro</p>
+<h3>Lista resultados</h3>
+<ul>
+    
+    {% for e in empleados %}
+        <li>{{e}}</li>
+    {% endfor %}
+        
+</ul>
